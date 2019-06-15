@@ -1,0 +1,18 @@
+@relation weather
+
+@attribute outlook {15-25,25-45,45-65}
+@attribute gender {male,female}
+@attribute profession {it,commerce,business}
+@attribute list{list1,list2,list3}
+
+@data
+15-25,male,it,list1
+15-25,female,commerce,list2
+15-25,female,it,list1
+15-25,male,it,list1
+15-25,male,commerce,list2
+25-45,male,it,list1
+25-45,female,business,list3
+45-65,male,business,list3
+45-65,female,business,list3
+

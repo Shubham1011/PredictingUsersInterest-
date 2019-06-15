@@ -1,0 +1,6 @@
+com\ml\service\NaiveBayesianClassifier.class
+com\ml\controller\MainController.class
+com\ml\model\Attribute.class
+com\ml\SwaggerConfig.class
+com\ml\model\InterestList.class
+com\ml\App.class
