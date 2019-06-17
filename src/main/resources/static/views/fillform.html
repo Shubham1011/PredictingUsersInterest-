@@ -1,0 +1,30 @@
+
+<form ng-submit="process()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter Your Age</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" ng-model="att.age" aria-describedby="emailHelp" placeholder="Enter age">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your age with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Gender</label>
+    <input type="text" class="form-control" ng-model="att.gender"  id="exampleInputPassword1" placeholder="you are a">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">Profession</label>
+    <input type="text" class="form-control" ng-model="att.profession"   id="exampleInputPassword1" placeholder="What do u do">
+  </div>
+  
+  <button type="submit" id="predictbutton" style="display: block" class="btn btn-primary">Predict my Interest</button>
+  <br>
+  <button type="button" id="resetbutton" ng-click="reset()" style="display: none" class="btn btn-success">Make another prediction</button>
+</form>
+<hr>
+<div class="card" style="width: 18rem;" ng-if="showinterest">
+  <div class="card-header">
+    Your interest list predicted is
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" ng-repeat="item in interestlist">{{item.topic}}</li>
+    
+  </ul>
+</div>

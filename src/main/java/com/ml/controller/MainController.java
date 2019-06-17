@@ -15,15 +15,15 @@ import com.ml.service.NaiveBayesianClassifier;
 @RestController
 public class MainController {
 
-	@Autowired
-	NaiveBayesianClassifier nbc;
 	
 	
 	
 	@PostMapping("/trainmodel")
 	public List<InterestList> classify(@RequestBody Attribute at) throws Exception
 	{
-	
+		NaiveBayesianClassifier nbc=new NaiveBayesianClassifier();
+		
+		
 	
 		String list=null;		
 		for(int i=0;i<2;i++)

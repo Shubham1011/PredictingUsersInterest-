@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.ml.model.InterestList;
 
@@ -17,6 +18,7 @@ import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 
 @SpringBootApplication
+@ComponentScan(basePackages="com.ml.controller")
 public class App extends SpringBootServletInitializer{
 
 	public static InterestList i1=new InterestList("technology", "/");
@@ -25,7 +27,7 @@ public class App extends SpringBootServletInitializer{
 	public static InterestList i3=new InterestList("business", "/");
 	public static InterestList i4=new InterestList("food", "/");
 	public static InterestList i5=new InterestList("politics", "/");
-	public static List<InterestList> list1=new ArrayList<>(Arrays.asList(i1,i2,i3,i3,i4));
+	public static List<InterestList> list1=new ArrayList<>(Arrays.asList(i1,i2,i3,i5,i4));
 	public static List<InterestList> list2=new ArrayList<>(Arrays.asList(i3,i5,i2,i1,i4));
 	public static List<InterestList> list3=new ArrayList<>(Arrays.asList(i5,i3,i2,i1,i4));
 	public static void main(String[] args) throws Exception {
