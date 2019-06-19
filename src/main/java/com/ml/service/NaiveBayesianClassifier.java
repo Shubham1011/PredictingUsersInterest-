@@ -26,7 +26,7 @@ public class NaiveBayesianClassifier {
 		
 		//loading the training dataset
 	
-	DataSource source=new DataSource("enter the location of your .arff file");
+	DataSource source=new DataSource("enter the location of your .arff file for training data");
 	System.out.println(source);
 	Instances traindataset=source.getDataSet();
 	//setting the class index (which would be one less than the number of attributes)
@@ -43,10 +43,10 @@ public class NaiveBayesianClassifier {
     System.out.println("model trained successfully");
     
     //test the model
-	DataSource testsource=new DataSource("enter the location of your .arff file");
+	DataSource testsource=new DataSource("enter the location of your .arff file for test data");
 	Instances testdataset=testsource.getDataSet();
 	
-	FileWriter fwriter = new FileWriter("enter the location of your .arff file",true); //true will append the new instance
+	FileWriter fwriter = new FileWriter("enter the location of your .arff file for test data",true); //true will append the new instance
 	fwriter.write(System.lineSeparator());
 	fwriter.write(at.getAgegroup()+","+at.getGender()+","+at.getProfession()+","+"?");//appends the string to the file
 	fwriter.close();
