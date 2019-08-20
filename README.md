@@ -15,7 +15,7 @@ to show the specific news depending on the user's interest  from the prediction 
 | 45            | female        | business      | list4         |
 
 Above is just a sample set from training dataset showing all the parameters
-I also generated a reat api which takes the json 
+I also generated a rest api which takes the json 
 ```
 {
   "age": 23,
